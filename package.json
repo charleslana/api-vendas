@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts"
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
+    "migrate:create": "ts-node-dev ./node_modules/typeorm/cli.js migration:create -n",
+    "migrate:up": "ts-node-dev ./node_modules/typeorm/cli.js migration:run",
+    "migrate:down": "ts-node-dev ./node_modules/typeorm/cli.js migration:revert"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +22,9 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-async-errors": "^3.1.1"
+    "express-async-errors": "^3.1.1",
+    "pg": "^8.5.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.29"
   }
 }
