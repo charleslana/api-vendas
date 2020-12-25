@@ -13,4 +13,15 @@ export class ProductsRepository extends Repository<Product> {
 
         return product;
     }
+
+    public async findByNameOwner(id: string, name: string): Promise<Product | undefined> {
+        const product = this.findOne({
+            where: {
+                id,
+                name,
+            },
+        });
+
+        return product;
+    }
 }
