@@ -1,5 +1,5 @@
-# Api de Vendas
-## Em andamento
+# Sales api
+## In progress
 List dev
 - [x] Create Database Postgres
 - [x] Create Migrations
@@ -9,10 +9,8 @@ List dev
 - [x] Upload Avatar
 - [x] User Recovery Password
 - [x] Send Email Fake 
-- [ ] Profile User  
-- [ ] Purchase order
+- [x] Profile User
+- [ ] Clients Resources
+- [ ] Purchase Order
 - [ ] Redis Cache
 - [ ] Final Adjustments
-
-# Preview Email Fake Success
-<img src="https://i.imgur.com/OCzI7TJ.png" width="auto"/>
