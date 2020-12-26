@@ -8,7 +8,10 @@ List dev
 - [x] Create Sessions
 - [x] Upload Avatar
 - [x] User Recovery Password
-- [ ] Send Email Fake 
-- [ ] Create Items
+- [x] Send Email Fake 
+- [ ] Purchase order
 - [ ] Redis Cache
 - [ ] Final Adjustments
+
+#Preview Email Fake Success
+<img src="https://i.imgur.com/OCzI7TJ.png" width="400"/>
