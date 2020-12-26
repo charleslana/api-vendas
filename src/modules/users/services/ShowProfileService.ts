@@ -9,7 +9,7 @@ interface InterfaceRequest {
 
 class ShowProfileService {
 
-    public async execute({userId} : InterfaceRequest): Promise<User> {
+    public async execute({userId}: InterfaceRequest): Promise<User> {
         const usersRepository = getCustomRepository(UsersRepository);
 
         const user = await usersRepository.findById(userId);
