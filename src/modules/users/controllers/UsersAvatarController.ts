@@ -8,6 +8,7 @@ export default class UsersAvatarController {
         if(!request.file) {
             throw new AppError('Invalid field, required avatar.');
         }
+        
         const updateAvatar = new UpdateUserAvatarService();
 
         const user = await updateAvatar.execute({
