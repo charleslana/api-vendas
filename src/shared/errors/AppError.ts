@@ -1,3 +1,8 @@
+interface AppError {
+    name: string;
+    stack?: string;
+}
+
 class AppError {
     public readonly message: string;
     public readonly statusCode: number;
@@ -6,9 +11,6 @@ class AppError {
         this.message = message;
         this.statusCode = statusCode;
     }
-}
-
-interface AppError extends Error {
 }
 
 export default AppError;
