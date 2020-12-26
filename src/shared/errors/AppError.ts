@@ -8,4 +8,7 @@ class AppError {
     }
 }
 
+interface AppError extends Error {
+}
+
 export default AppError;

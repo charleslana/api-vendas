@@ -23,6 +23,6 @@ export default class UsersController {
             password
         });
 
-        return response.json(user);
+        return response.status(201).json(user);
     }
 }
