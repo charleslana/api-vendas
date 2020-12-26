@@ -6,7 +6,7 @@ import multer from "multer";
 import uploadConfig from '../../../config/upload';
 import UsersAvatarController from "../controllers/UsersAvatarController";
 
-const usersRouter = Router();
+const usersRoutes = Router();
 
 const usersController = new UsersController();
 
@@ -14,9 +14,9 @@ const usersAvatarController = new UsersAvatarController();
 
 const upload = multer(uploadConfig);
 
-usersRouter.get('/', Authenticated, usersController.index);
+usersRoutes.get('/', Authenticated, usersController.index);
 
-usersRouter.post(
+usersRoutes.post(
     '/',
     celebrate({
         [Segments.BODY]: {
@@ -28,11 +28,11 @@ usersRouter.post(
     usersController.create
 );
 
-usersRouter.patch(
+usersRoutes.patch(
     '/avatar',
     Authenticated,
     upload.single('avatar'),
     usersAvatarController.update
 );
 
-export default usersRouter;
+export default usersRoutes;

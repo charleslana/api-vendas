@@ -2,11 +2,11 @@ import {Router} from 'express';
 import {celebrate, Joi, Segments} from "celebrate";
 import SessionsController from "../controllers/SessionsController";
 
-const sessionsRouter = Router();
+const sessionsRoutes = Router();
 
 const sessionsController = new SessionsController();
 
-sessionsRouter.post(
+sessionsRoutes.post(
     '/',
     celebrate({
         [Segments.BODY]: {
@@ -17,4 +17,4 @@ sessionsRouter.post(
     sessionsController.create
 );
 
-export default sessionsRouter;
+export default sessionsRoutes;

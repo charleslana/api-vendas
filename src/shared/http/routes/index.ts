@@ -1,14 +1,17 @@
 import {Router} from 'express';
-import productsRouter from "../../../modules/products/routes/products-router";
-import usersRouter from "../../../modules/users/routes/users-router";
-import sessionsRouter from "../../../modules/users/routes/sessions-router";
+import productsRoutes from "../../../modules/products/routes/products-routes";
+import usersRoutes from "../../../modules/users/routes/users-routes";
+import sessionsRoutes from "../../../modules/users/routes/sessions-routes";
+import passwordRoutes from "../../../modules/users/routes/password-routes";
 
 const routes = Router();
 
-routes.use('/products', productsRouter);
+routes.use('/products', productsRoutes);
 
-routes.use('/users', usersRouter);
+routes.use('/users', usersRoutes);
 
-routes.use('/sessions', sessionsRouter);
+routes.use('/sessions', sessionsRoutes);
+
+routes.use('/password', passwordRoutes);
 
 export default routes;
