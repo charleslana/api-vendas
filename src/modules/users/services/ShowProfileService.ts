@@ -4,7 +4,7 @@ import UsersRepository from "../typeorm/repositories/UsersRepository";
 import AppError from "../../../shared/errors/AppError";
 
 interface InterfaceRequest {
-    userId: string
+    userId: string;
 }
 
 class ShowProfileService {
