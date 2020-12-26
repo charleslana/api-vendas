@@ -7,6 +7,7 @@ List dev
 - [x] Create Users
 - [x] Create Sessions
 - [x] Upload Avatar
+- [ ] User Recovery Password
 - [ ] Create Items
 - [ ] Redis Cache
 - [ ] Final Adjustments
