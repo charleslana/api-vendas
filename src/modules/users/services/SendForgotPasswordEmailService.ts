@@ -2,6 +2,7 @@ import {getCustomRepository} from "typeorm";
 import UsersRepository from "../typeorm/repositories/UsersRepository";
 import UserTokensRepository from "../typeorm/repositories/UserTokensRepository";
 import AppError from "../../../shared/errors/AppError";
+import EtherealMail from "../../../config/mail/EtherealMail";
 
 interface InterfaceRequest {
     email: string;
@@ -21,6 +22,11 @@ class SendForgotPasswordEmailService {
         }
 
         const token = await userTokenRepository.generate(user.id);
+
+        await EtherealMail.sendEmail({
+            to: email,
+            body: `Password reset request received: ${token?.token}`
+        });
     }
 }
 

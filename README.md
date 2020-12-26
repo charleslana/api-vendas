@@ -7,7 +7,8 @@ List dev
 - [x] Create Users
 - [x] Create Sessions
 - [x] Upload Avatar
-- [ ] User Recovery Password
+- [x] User Recovery Password
+- [ ] Send Email Fake 
 - [ ] Create Items
 - [ ] Redis Cache
 - [ ] Final Adjustments
