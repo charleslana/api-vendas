@@ -7,6 +7,7 @@ import routes from './routes';
 import AppError from "../errors/AppError";
 import '../typeorm';
 import uploadConfig from '../../config/upload';
+import multer from "multer";
 
 const app = express();
 
@@ -24,6 +25,14 @@ app.use((error: Error, request: Request, response: Response, next: NextFunction)
     if(error instanceof AppError) {
         return response.status(error.statusCode).json({
             statusCode: error.statusCode,
+            status: 'error',
+            message: error.message
+        });
+    }
+
+    if(error instanceof multer.MulterError) {
+        return response.status(400).json({
+            statusCode: 400,
             status: 'error',
             message: error.message
         });
