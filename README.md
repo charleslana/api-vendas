@@ -13,5 +13,5 @@ List dev
 - [ ] Redis Cache
 - [ ] Final Adjustments
 
-#Preview Email Fake Success
-<img src="https://i.imgur.com/OCzI7TJ.png" width="400"/>
+# Preview Email Fake Success
+<img src="https://i.imgur.com/OCzI7TJ.png" width="auto"/>
