@@ -9,6 +9,7 @@ List dev
 - [x] Upload Avatar
 - [x] User Recovery Password
 - [x] Send Email Fake 
+- [ ] Profile User  
 - [ ] Purchase order
 - [ ] Redis Cache
 - [ ] Final Adjustments

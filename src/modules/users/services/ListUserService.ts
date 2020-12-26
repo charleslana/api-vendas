@@ -7,9 +7,9 @@ class ListUserService {
     public async execute(): Promise<User[]> {
         const usersRepository = getCustomRepository(UsersRepository);
 
-        const user = await usersRepository.find();
+        const users = await usersRepository.find();
 
-        return user;
+        return users;
 
     }
 }
