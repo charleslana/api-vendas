@@ -1,6 +1,7 @@
 import {Request, Response} from "express";
 import UpdateUserAvatarService from "../services/UpdateUserAvatarService";
 import AppError from "../../../shared/errors/AppError";
+import {classToPlain} from "class-transformer";
 
 export default class UsersAvatarController {
 
@@ -16,6 +17,6 @@ export default class UsersAvatarController {
             avatarFilename: request.file.filename
         });
 
-        return response.json(user);
+        return response.json(classToPlain(user));
     }
 }

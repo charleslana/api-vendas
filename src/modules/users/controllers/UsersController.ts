@@ -1,6 +1,7 @@
 import {Request, Response} from "express";
 import ListUserService from "../services/ListUserService";
 import CreateUserService from "../services/CreateUserService";
+import {classToPlain} from "class-transformer";
 
 export default class UsersController {
 
@@ -9,7 +10,7 @@ export default class UsersController {
 
         const users = await listUser.execute();
 
-        return response.json(users);
+        return response.json(classToPlain(users));
     }
 
     public async create(request: Request, response: Response): Promise<Response> {
