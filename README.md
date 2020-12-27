@@ -10,7 +10,7 @@ List dev
 - [x] User Recovery Password
 - [x] Send Email Fake 
 - [x] Profile User
-- [ ] Customers Resources
+- [x] Customers Resources
 - [ ] Purchase Order
 - [ ] Redis Cache
 - [ ] Final Adjustments
