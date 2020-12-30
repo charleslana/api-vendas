@@ -1,10 +1,14 @@
-import {Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn} from 'typeorm';
+import {Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn} from 'typeorm';
+import OrdersProducts from "../../../orders/typeorm/entities/OrdersProducts";
 
 @Entity('products')
 class Product {
 
     @PrimaryGeneratedColumn('uuid')
     id: string;
+
+    @OneToMany(() => OrdersProducts, orderProducts => orderProducts.product)
+    order_products: OrdersProducts[];
 
     @Column()
     name: string;

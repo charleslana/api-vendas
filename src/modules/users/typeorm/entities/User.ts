@@ -3,6 +3,7 @@ import {Exclude} from "class-transformer";
 
 @Entity('users')
 class User {
+
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
