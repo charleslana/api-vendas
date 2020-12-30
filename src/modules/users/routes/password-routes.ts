@@ -13,7 +13,7 @@ passwordRoutes.post(
     '/forgot',
     celebrate({
         [Segments.BODY]: {
-            email: Joi.string().email().required()
+            email: Joi.string().email().required().max(50)
         }
     }),
     forgotPasswordController.create
@@ -24,7 +24,7 @@ passwordRoutes.post(
     celebrate({
         [Segments.BODY]: {
             token: Joi.string().uuid().required(),
-            password: Joi.string().required(),
+            password: Joi.string().required().min(6).max(50),
             passwordConfirmation: Joi.string().required().valid(Joi.ref('password'))
         }
     },{abortEarly: false}),

@@ -15,10 +15,10 @@ profileRoutes.put(
     '/',
     celebrate({
         [Segments.BODY]: {
-            name: Joi.string().trim().required(),
-            email: Joi.string().email().required(),
-            oldPassword: Joi.string(),
-            password: Joi.string().optional(),
+            name: Joi.string().trim().required().min(2).max(50),
+            email: Joi.string().email().required().max(50),
+            oldPassword: Joi.string().max(50),
+            password: Joi.string().optional().min(6).max(50),
             passwordConfirmation: Joi.string().valid(Joi.ref('password')).when('password', {
                 is: Joi.exist(),
                 then: Joi.required()

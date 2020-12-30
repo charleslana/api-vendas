@@ -25,8 +25,8 @@ customersRoutes.post(
     '/',
     celebrate({
         [Segments.BODY]: {
-            name: Joi.string().trim().required(),
-            email: Joi.string().email().required()
+            name: Joi.string().trim().required().min(2).max(50),
+            email: Joi.string().email().required().max(50)
         }
     },{abortEarly: false}),
     customersController.create
@@ -39,8 +39,8 @@ customersRoutes.put(
             id: Joi.string().uuid().required()
         },
         [Segments.BODY]: {
-            name: Joi.string().trim().required(),
-            email: Joi.string().email().required()
+            name: Joi.string().trim().required().min(2).max(50),
+            email: Joi.string().email().required().max(50)
         }
     },{abortEarly: false}),
     customersController.update

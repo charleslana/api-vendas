@@ -20,9 +20,9 @@ usersRoutes.post(
     '/',
     celebrate({
         [Segments.BODY]: {
-            name: Joi.string().trim().required(),
-            email: Joi.string().email().required(),
-            password: Joi.string().required()
+            name: Joi.string().trim().required().min(2).max(50),
+            email: Joi.string().email().required().max(50),
+            password: Joi.string().required().min(6).max(50)
         }
     },{abortEarly: false}),
     usersController.create
