@@ -53,13 +53,12 @@ class CreateOrderService {
         );
 
         if(quantityAvailable.length) {
-            throw new AppError(`The quantity ${quantityAvailable[0].quantity} 
-            is not available for ${quantityAvailable[0].id}.`);
+            throw new AppError(`The quantity ${quantityAvailable[0].quantity} is not available for ${quantityAvailable[0].id}.`);
         }
 
         const serializesProducts = products.map(
             product => ({
-                productId: product.id,
+                product_id: product.id,
                 quantity: product.quantity,
                 price: existsProducts.filter(p => p.id === product.id)[0].price
             })
@@ -75,7 +74,7 @@ class CreateOrderService {
         const updatedProductQuantity = order_products.map(
             product => ({
                 id: product.product_id,
-                quantity: existsProducts.filter(p => p.id === product.id)[0].quantity - product.quantity
+                quantity: existsProducts.filter(p => p.id === product.product_id)[0].quantity - product.quantity
             })
         );
 

@@ -11,6 +11,7 @@ List dev
 - [x] Send Email Fake 
 - [x] Profile User
 - [x] Customers Resources
-- [ ] Purchase Order
+- [x] Purchase Order
+- [ ] Refactoring Code
 - [ ] Redis Cache
 - [ ] Final Adjustments

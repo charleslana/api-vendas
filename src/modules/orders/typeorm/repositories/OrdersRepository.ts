@@ -3,7 +3,7 @@ import Order from "../entities/Order";
 import Customer from "../../../customers/typeorm/entities/Customer";
 
 interface InterfaceProduct {
-    productId: string,
+    product_id: string,
     price: number,
     quantity: number
 }
