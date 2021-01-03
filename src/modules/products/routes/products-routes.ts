@@ -22,7 +22,9 @@ productsRoutes.post(
     '/',
     celebrate({
         [Segments.BODY]: {
-            name: Joi.string().trim().required().min(2).max(50),
+            name: Joi.string()
+                .pattern(new RegExp('^[a-zA-Z0-9 _]*$'))
+                .trim().required().min(2).max(50),
             price: Joi.number().precision(2).required().min(0).max(10000),
             quantity: Joi.number().required().min(1).max(10000)
         }
@@ -37,7 +39,9 @@ productsRoutes.put(
             id: Joi.string().uuid().required()
         },
         [Segments.BODY]: {
-            name: Joi.string().trim().required(),
+            name: Joi.string()
+                .pattern(new RegExp('^[a-zA-Z0-9 _]*$'))
+                .trim().required().min(2).max(50),
             price: Joi.number().precision(2).required(),
             quantity: Joi.number().required()
         }

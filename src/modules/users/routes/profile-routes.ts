@@ -15,7 +15,9 @@ profileRoutes.put(
     '/',
     celebrate({
         [Segments.BODY]: {
-            name: Joi.string().trim().required().min(2).max(50),
+            name: Joi.string()
+                .pattern(new RegExp('^[a-zA-Z0-9 _]*$'))
+                .trim().required().min(2).max(50),
             email: Joi.string().email().required().max(50),
             oldPassword: Joi.string().max(50),
             password: Joi.string().optional().min(6).max(50),

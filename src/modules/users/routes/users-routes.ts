@@ -20,7 +20,9 @@ usersRoutes.post(
     '/',
     celebrate({
         [Segments.BODY]: {
-            name: Joi.string().trim().required().min(2).max(50),
+            name: Joi.string()
+                .pattern(new RegExp('^[a-zA-Z0-9 _]*$'))
+                .trim().required().min(2).max(50),
             email: Joi.string().email().required().max(50),
             password: Joi.string().required().min(6).max(50)
         }
