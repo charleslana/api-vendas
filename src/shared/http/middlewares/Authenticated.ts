@@ -19,7 +19,7 @@ export default function Authenticated(request: Request, response: Response, next
     const [, token] = authHeader.split(' ');
 
     try {
-        const decodedToken = verify(token, authConfig.jwt.secret);
+        const decodedToken = verify(token, String(authConfig.jwt.secret));
 
         const {sub} = decodedToken as InterfaceTokenPayload;
 

@@ -10,12 +10,15 @@ import '../typeorm';
 import uploadConfig from '../../config/upload';
 import multer from "multer";
 import {pagination} from 'typeorm-pagination';
+import RateLimiter from "./middlewares/RateLimiter";
 
 const app = express();
 
 app.use(cors());
 
 app.use(express.json());
+
+app.use(RateLimiter);
 
 app.use(pagination);
 

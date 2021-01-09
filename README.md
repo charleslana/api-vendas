@@ -12,6 +12,7 @@ List dev
 - [x] Profile User
 - [x] Customers Resources
 - [x] Purchase Order
-- [x] Redis Cache  
+- [x] Redis Cache
+- [ ] Rate Limiter Flexible - Control Api  
 - [ ] Refactoring Code
 - [ ] Final Adjustments
