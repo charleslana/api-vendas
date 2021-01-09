@@ -12,7 +12,7 @@ interface InterfaceTokenPayload {
 export default function Authenticated(request: Request, response: Response, next: NextFunction): void {
     const authHeader = request.headers.authorization;
 
-    if(!authHeader) {
+    if (!authHeader) {
         throw new AppError('JWT token is missing.');
     }
 
