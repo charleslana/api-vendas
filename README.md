@@ -13,6 +13,6 @@ List dev
 - [x] Customers Resources
 - [x] Purchase Order
 - [x] Redis Cache
-- [ ] Rate Limiter Flexible - Control Api  
+- [x] Rate Limiter 
 - [ ] Refactoring Code
 - [ ] Final Adjustments
