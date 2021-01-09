@@ -15,4 +15,3 @@ List dev
 - [x] Redis Cache
 - [x] Rate Limiter 
 - [ ] Refactoring Code
-- [ ] Final Adjustments
