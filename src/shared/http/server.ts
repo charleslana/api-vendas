@@ -26,7 +26,7 @@ app.use(routes);
 app.use(errors());
 
 app.use((error: Error, request: Request, response: Response, next: NextFunction) => {
-    if(error instanceof AppError) {
+    if (error instanceof AppError) {
         return response.status(error.statusCode).json({
             statusCode: error.statusCode,
             status: 'error',
@@ -34,7 +34,7 @@ app.use((error: Error, request: Request, response: Response, next: NextFunction)
         });
     }
 
-    if(error instanceof multer.MulterError) {
+    if (error instanceof multer.MulterError) {
         return response.status(400).json({
             statusCode: 400,
             status: 'error',
@@ -50,5 +50,5 @@ app.use((error: Error, request: Request, response: Response, next: NextFunction)
 });
 
 app.listen(3333, () => {
-   console.log('Server started on port 3333.');
+    console.log('Server started on port 3333.');
 });

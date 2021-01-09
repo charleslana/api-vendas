@@ -12,6 +12,6 @@ List dev
 - [x] Profile User
 - [x] Customers Resources
 - [x] Purchase Order
+- [ ] Redis Cache  
 - [ ] Refactoring Code
-- [ ] Redis Cache
 - [ ] Final Adjustments
