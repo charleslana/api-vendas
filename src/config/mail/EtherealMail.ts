@@ -35,8 +35,8 @@ export default class EtherealMail {
                 address: from?.email || 'contact@apivendas.com'
             },
             to: {
-               name: to.name,
-               address: to.email
+                name: to.name,
+                address: to.email
             },
             subject,
             html: await mailTemplate.parse(templateData)
