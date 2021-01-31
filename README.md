@@ -13,5 +13,4 @@ List dev
 - [x] Customers Resources
 - [x] Purchase Order
 - [x] Redis Cache
-- [x] Rate Limiter 
-- [ ] Refactoring Code
+- [x] Rate Limiter
